@@ -1,37 +1,49 @@
 angular.module('phonecatControllers', ['templateservicemod', 'navigationservice', 'ui.bootstrap', 'ngAnimate', 'ngSanitize', 'angular-flexslider', 'ksSwiper'])
 
-.controller('HomeCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('HomeCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
     $scope.template = TemplateService.changecontent("home"); //Use same name of .html file
     $scope.menutitle = NavigationService.makeactive("Home"); //This is the Title of the Website
     TemplateService.title = $scope.menutitle;
     $scope.navigation = NavigationService.getnav();
     //
     $scope.mySlides = [{
-               img: "img/Untitled-1.jpg",
-               head1: "INTERIOR REMODELING WITH EXCELLENT FLOORING MAKES",
-               head2: "YOUR LIFE EASIER",
-               button: "OUR PORTFOLIO"
+        img: "img/banner.jpg",
+        head1: "INTERIOR REMODELING WITH EXCELLENT FLOORING MAKES",
+        head2: "YOUR LIFE EASIER",
+        button: "OUR PORTFOLIO"
 
-           }, {
-             img: "img/Untitled-1.jpg",
-             head1: "INTERIOR REMODELING WITH EXCELLENT FLOORING MAKES",
-             head2: "YOUR LIFE EASIER",
-             button: "OUR PORTFOLIO"
-           }, {
-             img: "img/Untitled-1.jpg",
-             head1: "INTERIOR REMODELING WITH EXCELLENT FLOORING MAKES",
-             head2: "YOUR LIFE EASIER",
-             button: "OUR PORTFOLIO"
-           }];
-    // $scope.mySlides = [
-    //     'http://flexslider.woothemes.com/images/kitchen_adventurer_cheesecake_brownie.jpg',
-    //     'http://flexslider.woothemes.com/images/kitchen_adventurer_lemon.jpg',
-    //     'http://flexslider.woothemes.com/images/kitchen_adventurer_donut.jpg',
-    //     'http://flexslider.woothemes.com/images/kitchen_adventurer_caramel.jpg'
-    // ];
+    }, {
+        img: "img/banner.jpg",
+        head1: "INTERIOR REMODELING WITH EXCELLENT FLOORING MAKES",
+        head2: "YOUR LIFE EASIER",
+        button: "OUR PORTFOLIO"
+    }, {
+        img: "img/banner.jpg",
+        head1: "INTERIOR REMODELING WITH EXCELLENT FLOORING MAKES",
+        head2: "YOUR LIFE EASIER",
+        button: "OUR PORTFOLIO"
+    }];
+    $scope.mySlides2 = [{
+        head: "RESIDENTIAL DESIGN",
+        para: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia "
+
+    }, {
+        head: "RESIDENTIAL DESIGN",
+        para: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia "
+    }, {
+        head: "RESIDENTIAL DESIGN",
+        para: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia "
+    }];
+    $scope.mySlides3 = [{
+        img: "img/slide1.jpg",
+    }, {
+        img: "img/slide1.jpg",
+    }, {
+        img: "img/slide1.jpg",
+    }];
 })
 
-.controller('FormCtrl', function($scope, TemplateService, NavigationService, $timeout) {
+.controller('FormCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
     $scope.template = TemplateService.changecontent("form"); //Use same name of .html file
     $scope.menutitle = NavigationService.makeactive("Form"); //This is the Title of the Website
     TemplateService.title = $scope.menutitle;
@@ -39,23 +51,23 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 
     $scope.formSubmitted = false;
 
-    $scope.submitForm = function(data) {
+    $scope.submitForm = function (data) {
         console.log(data);
         $scope.formSubmitted = true;
     }
 })
 
-.controller('headerctrl', function($scope, TemplateService) {
+.controller('headerctrl', function ($scope, TemplateService) {
     $scope.template = TemplateService;
-    $scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+    $scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
         $(window).scrollTop(0);
     });
     $.fancybox.close(true);
 })
 
-.controller('languageCtrl', function($scope, TemplateService, $translate, $rootScope) {
+.controller('languageCtrl', function ($scope, TemplateService, $translate, $rootScope) {
 
-    $scope.changeLanguage = function() {
+    $scope.changeLanguage = function () {
         console.log("Language CLicked");
 
         if (!$.jStorage.get("language")) {

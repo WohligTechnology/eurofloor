@@ -6,13 +6,28 @@
 @import "../bower_components/fancyBox/source/jquery.fancybox.css";
 @import "../bower_components/swiper/dist/css/swiper.min.css";
 @import "../bower_components/smart-app-banner/smart-app-banner.css";
+
 /* Bootstrap Variables Goes Here */
-$brand-primary: #0d9dff !default;
+
+$brand-primary: #4e4c75 !default;
 $brand-success: #84ce3c !default;
 $brand-warning: #ffec39 !default;
 $brand-danger: #fc483f !default;
 $brand-info: #000072 !default;
 @import "../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@font-face {
+    font-family: "lato";
+    src: url("../fonts/Lato-Regular.ttf");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "lato";
+}
 
 body {
     padding-top: 70px;
@@ -50,21 +65,38 @@ a {
 }
 
 footer {
-    font-size: 12px;
-    background-color: #eee;
-    padding: 10px 0;
-
-    p {
-        margin: 0;
+    background-color: #ebebeb;
+    padding-top: 5%;
+    h1 {
+        color: $brand-primary;
+        font-weight: bold;
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+    .comp-desc {
+        font-size: 14px;
+        text-align: justify;
+        color: #525252;
+        padding-right: 50px;
+    }
+    h4 {
+        color: $brand-primary;
+        font-weight: bold;
+        margin-bottom: 36px;
+        margin-top: 0;
     }
 }
-//bootstrap forms
 
+.flex-direction-nav {
+    display: none;
+}
+
+//bootstrap forms
 .btn,
 .form-control,
-.input-group-lg > .form-control,
-.input-group-lg > .input-group-addon,
-.input-group-lg > .input-group-btn > .btn,
+.input-group-lg>.form-control,
+.input-group-lg>.input-group-addon,
+.input-group-lg>.input-group-btn>.btn,
 .input-lg {
     border-radius: 0;
     @include box-shadow(none);
@@ -82,11 +114,9 @@ footer {
 
 .form-invalid {
     color: $brand-danger;
-
     .form-control {
         border-color: $brand-danger;
         color: $brand-danger;
-
         &::-webkit-input-placeholder {
             color: $brand-danger;
         }
@@ -96,23 +126,21 @@ footer {
 .form-submission {
     min-height: 300px;
 }
-//FLEX SLIDER FIXES
 
+//FLEX SLIDER FIXES
 .flex-direction-nav {
     a {
         height: auto;
     }
-
     .flex-prev {
         left: 10px !important;
     }
-
     .flex-next {
         right: 10px !important;
     }
 }
-//SWIPER CSS
 
+//SWIPER CSS
 .swiper-button-prev,
 .swiper-container-rtl .swiper-button-next {
     background-image: url("../img/prev.png");
@@ -122,7 +150,10 @@ footer {
 .swiper-container-rtl .swiper-button-prev {
     background-image: url("../img/next.png");
 }
+
+
 /* Start writing sass here */
+
 .content {
     min-height: 450px;
 }
@@ -131,8 +162,8 @@ footer {
     width: 100%;
     display: block;
 }
-///CSS START EURO FLOOR
 
+///CSS START EURO FLOOR
 .navbar-default {
     background-color: #ffffff !important;
     border-color: #ffffff !important;
@@ -145,22 +176,20 @@ footer {
 .events {
     position: relative;
     cursor: pointer;
-
     &:hover {
         .over-layer {
             display: block;
         }
     }
-
     .over-layer {
         display: none;
-        background-color: rgba(63,0,255,0.55);
+        background-color: rgba(63, 0, 255, 0.55);
         height: 100%;
         width: 100%;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
     }
 }
 
@@ -199,7 +228,7 @@ footer {
 }
 
 .pad18 {
-        padding: 22px 0px;
+    padding: 22px 0px;
 }
 
 .headA {
@@ -212,5 +241,134 @@ footer {
     line-height: 20px !important;
     padding: 3px 40px !important;
 }
+
+//home-page
+.home-page {
+    .banner {
+        .flexslider {
+            margin-bottom: 0 !important;
+        }
+        .flex-control-nav {
+            z-index: 222;
+            bottom: 25px;
+            a {
+                background-color: #8E9092;
+            }
+            .flex-active {
+                background-color: #fff;
+            }
+        }
+        .item {
+            position: relative;
+            text-align: center;
+        }
+        .links {
+            position: absolute;
+            width: 100%;
+            top: 30%;
+        }
+        .head1 {
+            color: #fff;
+        }
+        .head2 {
+            color: #fff;
+            font-weight: bold;
+        }
+        hr {
+            background-color: #fff;
+            width: 100px;
+            height: 2px;
+        }
+        .banner-btn {
+            color: #fff;
+            background-color: transparent;
+            border: 1px solid #fff;
+            margin-top: 20px;
+            font-family: lato;
+            padding: 10px 25px;
+            &:focus {
+                border: 1px solid #fff;
+            }
+        }
+    }
+    .what-we-do1 {
+        background-image: url(../img/WHAT.jpg);
+        background-repeat: no-repeat;
+        background-size: 34%;
+        background-position-y: 60%;
+    }
+    .what-we-do2 {
+        background-image: url(../img/we-do.jpg);
+        background-repeat: no-repeat;
+        background-size: 34%;
+        background-position-y: 93%;
+        background-position-x: 100%;
+        background-color: rgba(255, 255, 255, 0);
+        .content {
+            padding-left: 15%;
+            .img-holder {
+                position: relative;
+                height: 250px;
+                width: 300px;
+                padding-left: 60px;
+                margin-top: 25%;
+            }
+            .title {
+                position: absolute;
+                left: 0;
+                top: 12%;
+                h1 {
+                    font-weight: bold;
+                }
+                .head1 {
+                    color: $brand-primary;
+                    // margin-bottom: 0;
+                }
+                .head2 {
+                    margin-top: 10px;
+                }
+            }
+            .content-slider {
+                .flex-control-nav {
+                    a {
+                        background-color: #8E9092;
+                    }
+                    .flex-active {
+                        background-color: #fff;
+                    }
+                }
+                h4 {
+                    font-weight: bold;
+                    color: $brand-primary;
+                }
+                p {
+                    text-align: justify;
+                }
+            }
+        }
+        .we-do {
+            position: relative;
+            .img-slider {
+                padding: 30% 10% 15% 15%;
+                z-index: 333;
+            }
+            .flex-control-nav {
+                z-index: 222;
+                bottom: 25px;
+                a {
+                    background-color: #8E9092;
+                }
+                .flex-active {
+                    background-color: #fff;
+                }
+            }
+            .img-holder {
+                position: absolute;
+                bottom: 0;
+            }
+        }
+    }
+}
+
 @import "fancybox-override";
 @import "mobile";
