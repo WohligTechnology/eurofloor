@@ -20,6 +20,11 @@ $brand-info: #000072 !default;
     src: url("../fonts/Lato-Regular.ttf");
 }
 
+@font-face {
+    font-family: "raleway";
+    src: url("../fonts/Raleway-Regular.ttf");
+}
+
 h1,
 h2,
 h3,
@@ -76,6 +81,20 @@ a {
     display: inline-block;
 }
 
+header {
+    .headA {
+        border-right: 2px solid #777 !important;
+        line-height: 20px !important;
+        padding: 3px 20px !important;
+        color: #a7a7a7;
+    }
+    .headB {
+        line-height: 20px !important;
+        padding: 3px 20px !important;
+        color: #a7a7a7;
+    }
+}
+
 footer {
     background-color: #ebebeb;
     padding-top: 5%;
@@ -107,7 +126,36 @@ footer {
     .list {
         padding-top: 5px;
         padding-bottom: 5px;
-        border-bottom: 1px solid #525252;
+        border-bottom: 1px solid #bbb;
+    }
+    .quick-link-group {
+        padding-right: 60%;
+    }
+    .contact-links {
+        li {
+            background-repeat: no-repeat;
+            background-position-y: 5px;
+            padding: 10px 0;
+            &:first-child {
+                background-image: url("../img/map-marker.png");
+            }
+            &:nth-child(2) {
+                background-image: url("../img/iphone.png");
+                background-position-x: 7px;
+            }
+            &:nth-child(3) {
+                background-image: url("../img/phone2.png");
+            }
+            &:nth-child(4) {
+                background-image: url("../img/envelope.png");
+            }
+            &:nth-child(5) {
+                background-image: url("../img/at-sign.png");
+            }
+        }
+        .contact-item {
+            padding-left: 40px;
+        }
     }
 }
 
@@ -260,17 +308,6 @@ footer {
     padding: 22px 0px;
 }
 
-.headA {
-    border-right: 2px solid #777 !important;
-    line-height: 20px !important;
-    padding: 3px 40px !important;
-}
-
-.headB {
-    line-height: 20px !important;
-    padding: 3px 40px !important;
-}
-
 //home-page
 .home-page {
     .banner {
@@ -327,7 +364,6 @@ footer {
         background-position-y: 60%;
     }
     .what-we-do2 {
-        background-image: url(../img/we-do.jpg);
         background-repeat: no-repeat;
         background-size: 34%;
         background-position-y: 93%;
@@ -337,7 +373,7 @@ footer {
             padding-left: 15%;
             .img-holder {
                 position: relative;
-                height: 250px;
+                height: 220px;
                 width: 300px;
                 padding-left: 60px;
                 margin-top: 25%;
@@ -351,27 +387,44 @@ footer {
                 }
                 .head1 {
                     color: $brand-primary;
+                    margin-bottom: 0;
                     // margin-bottom: 0;
                 }
                 .head2 {
                     margin-top: 10px;
+                    margin-top: 0;
                 }
             }
             .content-slider {
                 .flex-control-nav {
                     a {
-                        background-color: #8E9092;
+                        background-color: #C9C9C9;
+                        opacity: 0.1;
                     }
                     .flex-active {
-                        background-color: #fff;
+                        background-color: #8E9092;
                     }
+                }
+                .flexslider {
+                    background-color: transparent;
                 }
                 h4 {
                     font-weight: bold;
                     color: $brand-primary;
                 }
+                hr {
+                    height: 2px;
+                    background-color: #c9c9c9;
+                    align: left;
+                    width: 22%;
+                    margin: 0;
+                    margin-bottom: 20px;
+                }
                 p {
                     text-align: justify;
+                    color: #343434;
+                    font-family: raleway;
+                    background-color: transparent;
                 }
             }
         }
@@ -380,6 +433,13 @@ footer {
             .img-slider {
                 padding: 30% 10% 15% 15%;
                 z-index: 333;
+            }
+            .we-do-img {
+                position: absolute;
+                right: 0;
+                bottom: 60px;
+                width: 460px;
+                margin-right: -12%;
             }
             .flex-control-nav {
                 z-index: 222;
@@ -403,6 +463,7 @@ footer {
     .process-content {
         background-color: #676588;
         padding: 10% 20%;
+        position: relative;
         .img-holder {
             position: relative;
             height: 250px;
@@ -418,21 +479,31 @@ footer {
             }
             .head1 {
                 color: #fff;
+                margin-bottom: 0;
                 // margin-bottom: 0;
             }
             .head2 {
                 margin-top: 10px;
                 color: #b5b5b5;
+                margin-top: 0;
             }
         }
         .description {
             text-align: justify;
             color: #fff;
             margin-bottom: 95px;
+            font-family: raleway;
+        }
+        .our-img {
+            position: absolute;
+            width: 290px;
+            top: 40%;
+            margin-left: -20%;
         }
         .process-img {
             width: 670px;
             margin-left: -33%;
+            margin-bottom: 38px;
         }
     }
     .side-image {
@@ -461,7 +532,8 @@ footer {
             }
             p {
                 text-align: justify;
-                color: #525252
+                color: #525252;
+                font-family: raleway;
             }
         }
     }
@@ -470,6 +542,7 @@ footer {
 .our-product {
     .product-title {
         padding: 10% 10% 10% 25%;
+        position: relative;
         .img-holder {
             position: relative;
             height: 250px;
@@ -485,10 +558,12 @@ footer {
             }
             .head1 {
                 color: $brand-primary;
+                margin-bottom: 0;
                 // margin-bottom: 0;
             }
             .head2 {
                 margin-top: 10px;
+                margin-top: 0;
             }
         }
         .our-img {
@@ -501,27 +576,45 @@ footer {
             margin-left: -39%;
         }
     }
+    .design-range {
+        position: absolute;
+        right: 0;
+        bottom: 30%;
+        text-align: right;
+        padding-right: 60px;
+        p {
+            color: #999999;
+            font-weight: bold;
+            margin-bottom: 25px;
+            cursor: pointer;
+            &:hover {
+                color: $brand-primary;
+            }
+        }
+    }
     .flex-holder {
         position: relative;
+        @include transition(all 3s ease);
         &:hover {
             .black-box {
                 display: block;
             }
         }
-    }
-    .black-box {
-        top: 0;
-        opacity: 0.6;
-        background-color: #000;
-        position: absolute;
-        width: 90%;
-        height: 80%;
-        display: none;
-        margin: 10% 5%;
-        cursor: pointer;
-        img {
-            margin: 40% auto;
-            height: 60px;
+        .black-box {
+            top: 0;
+            opacity: 0.6;
+            background: #000;
+            position: absolute;
+            width: 90%;
+            height: 80%;
+            display: none;
+            margin: 10% 5%;
+            cursor: pointer;
+            @include transition(all 3s ease);
+            img {
+                margin: 40% auto;
+                height: 60px;
+            }
         }
     }
     .social-icons {
@@ -530,8 +623,11 @@ footer {
         margin-top: 10%;
         .img-holder {
             display: inline-block;
-            padding: 10px;
+            margin: 10px;
             cursor: pointer;
+            img {
+                height: 20px !important;
+            }
         }
     }
 }
@@ -556,11 +652,12 @@ footer {
             }
             .head1 {
                 color: #fff;
-                // margin-bottom: 0;
+                margin-bottom: 0;
             }
             .head2 {
                 margin-top: 10px;
                 color: #b5b5b5;
+                margin-top: 0;
             }
         }
         .our-img {

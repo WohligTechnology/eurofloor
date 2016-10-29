@@ -1,12 +1,12 @@
 {
-  "name": "angularframeworkfrontend",
-  "description": "AngularFrameworkFrontend",
+  "name": "eurofloor",
+  "description": "eurofloor",
   "main": "gulpfile.js",
   "authors": [
     "chintan@wohlig.com"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/WohligTechnology/AngularFrameworkFrontend",
+  "homepage": "https://github.com/WohligTechnology/eurofloor",
   "moduleType": [],
   "ignore": [
     "**/.*",
