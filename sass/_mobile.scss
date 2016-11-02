@@ -1,5 +1,24 @@
+@media (max-width:1200px) {
+    .home-page .what-we-do .we-do .we-do-img {
+        margin-right: 0;
+    }
+}
+
+//
+@media (max-width: $screen-sm-max) {
+    .our-process .side-image {
+        padding: 10% 5% 10% 5%;
+    }
+    .our-process .side-image .process-steps {
+        margin-left: 0;
+    }
+    .our-client .content-slider {
+        padding: 15% 20% 20% 20%;
+    }
+}
+
+//
 @media (max-width: $screen-xs-max) {}
 
-@media (max-width: $screen-sm-max) {}
-
+//
 @media (max-width: $screen-md-max) {}

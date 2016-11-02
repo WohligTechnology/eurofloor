@@ -16,42 +16,43 @@
             </li>
         </flex-slider>
     </div>
-    <div class="what-we-do1">
-        <div class="what-we-do2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-lg-6 pad-rem">
-                        <div class="content">
-                            <div class="img-holder">
-                                <div class="title">
-                                    <h1 class="head1">WHAT</h1>
-                                    <h1 class="head2">WE DO</h1>
-                                </div>
-                                <img src="img/window.jpg" class="img-responsive" alt="">
+    <div class="what-we-do">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6  pad-rem">
+                    <div class="content">
+                        <div class="img-holder">
+                            <div class="title">
+                                <h1 class="head1">WHAT</h1>
+                                <h1 class="head2">WE DO</h1>
                             </div>
-                            <div class="content-slider">
-                                <flex-slider flex-slide="s in mySlides2 track by $index" prev-text="" next-text="">
-                                    <li>
-                                        <h4>{{s.head}}</h4>
-                                        <hr class="dash">
-                                        <p>{{s.para}}</p>
-                                    </li>
-                                </flex-slider>
-                            </div>
+                            <img src="img/window.jpg" class="img-responsive" alt="">
+                        </div>
+                        <div class="what-img">
+                            <img src="img/what.jpg" class="img-responsive" alt="">
+                        </div>
+                        <div class="content-slider">
+                            <flex-slider flex-slide="s in mySlides2 track by $index" prev-text="" next-text="">
+                                <li>
+                                    <h4>{{s.head}}</h4>
+                                    <hr class="dash">
+                                    <p>{{s.para}}</p>
+                                </li>
+                            </flex-slider>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6 pad-rem">
-                        <div class="we-do">
-                            <div class="img-slider">
-                                <flex-slider flex-slide="s in mySlides3 track by $index" prev-text="" next-text="">
-                                    <li>
-                                        <img ng-src="{{s.img}}">
-                                    </li>
-                                </flex-slider>
-                            </div>
-                            <div class="we-do-img">
-                                <img src="img/we-do.jpg" class="img-responsive" alt="">
-                            </div>
+                </div>
+                <div class="col-md-6  pad-rem">
+                    <div class="we-do">
+                        <div class="img-slider">
+                            <flex-slider flex-slide="s in mySlides3 track by $index" prev-text="" next-text="">
+                                <li>
+                                    <img ng-src="{{s.img}}">
+                                </li>
+                            </flex-slider>
+                        </div>
+                        <div class="we-do-img">
+                            <img src="img/we-do.jpg" class="img-responsive" alt="">
                         </div>
                     </div>
                 </div>

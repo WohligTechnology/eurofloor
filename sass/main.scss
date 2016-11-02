@@ -371,20 +371,10 @@
                 }
             }
         }
-        .what-we-do1 {
-            background-image: url(../img/WHAT.jpg);
-            background-repeat: no-repeat;
-            background-size: 34%;
-            background-position-y: 60%;
-        }
-        .what-we-do2 {
-            background-repeat: no-repeat;
-            background-size: 34%;
-            background-position-y: 93%;
-            background-position-x: 100%;
-            background-color: rgba(255, 255, 255, 0);
+        .what-we-do {
             .content {
                 padding-left: 15%;
+                position: relative;
                 .img-holder {
                     position: relative;
                     height: 220px;
@@ -408,6 +398,13 @@
                         margin-top: 10px;
                         margin-top: 0;
                     }
+                }
+                .what-img {
+                    position: absolute;
+                    position: absolute;
+                    left: -11%;
+                    top: 65%;
+                    width: 431px;
                 }
                 .content-slider {
                     .flex-control-nav {
@@ -453,7 +450,7 @@
                     right: 0;
                     bottom: 60px;
                     width: 460px;
-                    margin-right: -12%;
+                    margin-right: -11%;
                 }
                 .flex-control-nav {
                     z-index: 222;
@@ -474,8 +471,8 @@
     }
     
     .our-process {
+        background-color: #676588;
         .process-content {
-            background-color: #676588;
             padding: 10% 20%;
             position: relative;
             .img-holder {
@@ -718,7 +715,7 @@
             background-color: rgba(0, 0, 0, 0.4)
         }
         .address-box {
-            background-color: #676588;
+            background-color: rgba(103, 101, 136, 0.58);
             border-left: 4px solid #fff;
             padding: 20px;
             margin: 10% 0 10% 10%;
@@ -772,6 +769,65 @@
             }
             .map {
                 padding-left: 60px;
+            }
+        }
+    }
+    
+    .about-us {
+        .banner {
+            background-image: url("../img/about-banner.jpeg");
+            background-position: 100%;
+        }
+        .banner-bg {
+            background-color: rgba(0, 0, 0, 0.4)
+        }
+        .about-box {
+            background-color: rgba(103, 101, 136, 0.58);
+            border-left: 4px solid #fff;
+            padding: 20px;
+            margin: 10% 10% 10% 10%;
+            display: inline-block;
+            h1 {
+                color: #fff;
+                font-weight: bold;
+            }
+            p {
+                color: #fff;
+                font-size: 16px;
+            }
+        }
+        .about-title {
+            padding: 70px 0 0 90px;
+            .img-holder {
+                position: relative;
+                height: 250px;
+                width: 300px;
+                padding-left: 60px;
+            }
+            .title {
+                position: absolute;
+                left: 28px;
+                top: 12%;
+                h1 {
+                    font-weight: bold;
+                }
+                .head1 {
+                    color: $brand-primary;
+                    margin-bottom: 0;
+                    // margin-bottom: 0;
+                }
+                .head2 {
+                    margin-top: 10px;
+                    margin-top: 0;
+                }
+            }
+        }
+        .about-content {
+            .content {
+                padding: 66px 90px 0 80px;
+                p {
+                    text-align: justify;
+                }
             }
         }
     }

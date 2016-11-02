@@ -51,13 +51,21 @@ angular.module('phonecatControllers', ['templateservicemod', 'navigationservice'
 })
 
 .controller('ContactCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
-    $scope.template = TemplateService.changecontent("contact"); //Use same name of .html file
-    $scope.menutitle = NavigationService.makeactive("Contact"); //This is the Title of the Website
-    TemplateService.title = $scope.menutitle;
-    $scope.navigation = NavigationService.getnav();
+        $scope.template = TemplateService.changecontent("contact"); //Use same name of .html file
+        $scope.menutitle = NavigationService.makeactive("Contact"); //This is the Title of the Website
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
 
 
-})
+    })
+    .controller('AboutUsCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
+        $scope.template = TemplateService.changecontent("about-us"); //Use same name of .html file
+        $scope.menutitle = NavigationService.makeactive("AboutUs"); //This is the Title of the Website
+        TemplateService.title = $scope.menutitle;
+        $scope.navigation = NavigationService.getnav();
+
+
+    })
 
 .controller('FormCtrl', function ($scope, TemplateService, NavigationService, $timeout) {
     $scope.template = TemplateService.changecontent("form"); //Use same name of .html file
