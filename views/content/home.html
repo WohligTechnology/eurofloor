@@ -17,7 +17,7 @@
         </flex-slider>
     </div>
     <div class="what-we-do">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6  pad-rem">
                     <div class="content">
@@ -176,13 +176,13 @@
                             <p>LAMINATE RANGE</p>
                         </div>
                         <div class="social-icons">
-                            <div class="img-holder ">
+                            <div class="img-hold ">
                                 <img src="img/facebook.jpg" class="img-responsive" height="20px" alt="">
                             </div>
-                            <div class="img-holder">
+                            <div class="img-hold">
                                 <img src="img/twitter.jpg" class="img-responsive" height="20px" alt="">
                             </div>
-                            <div class="img-holder">
+                            <div class="img-hold">
                                 <img src="img/google.jpg" class="img-responsive" height="20px" alt="">
                             </div>
                         </div>
@@ -244,7 +244,11 @@
                     <div class="content-slider">
                         <flex-slider flex-slide="s in mySlides4 track by $index" prev-text="" next-text="">
                             <li>
-                                <p>{{s.para}}</p>
+                                <p>
+                                    {{s.para}}
+                                    <img src="img/quote-left.png" class="quote-left img-responsive" alt="">
+                                    <img src="img/quote-right.png" class="quote-right img-responsive" alt="">
+                                </p>
                             </li>
                         </flex-slider>
                         <div class="client-img">

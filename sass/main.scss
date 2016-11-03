@@ -159,18 +159,28 @@
                 &:nth-child(3) {
                     background-image: url("../img/phone2.png");
                     background-size: 22px;
+                    background-position-y: 10px;
                 }
                 &:nth-child(4) {
                     background-image: url("../img/envelope.png");
                     background-size: 22px;
+                    background-position-y: 10px;
                 }
                 &:nth-child(5) {
                     background-image: url("../img/at-sign.png");
                     background-size: 22px;
+                    background-position-y: 10px;
                 }
             }
             .contact-item {
                 padding-left: 40px;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            address {
+                color: #525252;
+                ;
             }
         }
     }
@@ -450,7 +460,6 @@
                     right: 0;
                     bottom: 60px;
                     width: 460px;
-                    margin-right: -11%;
                 }
                 .flex-control-nav {
                     z-index: 222;
@@ -552,7 +561,7 @@
     
     .our-product {
         .product-title {
-            padding: 10% 10% 10% 25%;
+            padding: 10% 10% 10% 20%;
             position: relative;
             .img-holder {
                 position: relative;
@@ -632,7 +641,7 @@
             text-align: right;
             padding-right: 50px;
             margin-top: 10%;
-            .img-holder {
+            .img-hold {
                 display: inline-block;
                 margin: 10px;
                 cursor: pointer;
@@ -687,6 +696,19 @@
             }
             p {
                 text-align: justify;
+                position: relative;
+                .quote-left {
+                    position: absolute;
+                    top: -20px;
+                    left: -35px;
+                    width: 25px;
+                }
+                .quote-right {
+                    position: absolute;
+                    bottom: -20px;
+                    right: -10px;
+                    width: 25px;
+                }
             }
             .flex-control-nav {
                 z-index: 222;
@@ -710,6 +732,7 @@
         .address {
             background-image: url("../img/contact-bg.jpeg");
             background-position: 100%;
+            background-size: cover;
         }
         .addr-bg {
             background-color: rgba(0, 0, 0, 0.4)
@@ -730,7 +753,7 @@
             }
         }
         .contact-title {
-            padding: 5% 0 0 5%;
+            padding: 5% 0 0 0;
             .img-holder {
                 position: relative;
                 height: 250px;
