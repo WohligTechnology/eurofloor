@@ -28,6 +28,16 @@ firstapp.config(function ($stateProvider, $urlRouterProvider, $httpProvider, $lo
             templateUrl: "views/template.html",
             controller: 'AboutUsCtrl'
         })
+        .state('collection', {
+            url: "/collection",
+            templateUrl: "views/template.html",
+            controller: 'CollectionCtrl'
+        })
+        .state('product-cat', {
+            url: "/product-cat",
+            templateUrl: "views/template.html",
+            controller: 'ProductCatCtrl'
+        })
         .state('form', {
             url: "/form",
             templateUrl: "views/template.html",
