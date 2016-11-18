@@ -7,28 +7,73 @@ if (isproduction) {
 
 var navigationservice = angular.module('navigationservice', [])
 
-.factory('NavigationService', function() {
+.factory('NavigationService', function () {
     var navigation = [{
         name: "Home",
-        classis: "active",
+        classis: "",
         anchor: "home",
-        subnav: [{
-            name: "Subnav1",
-            classis: "active",
-            anchor: "home"
-        }]
+
     }, {
-        name: "Form",
-        classis: "active",
-        anchor: "form",
-        subnav: []
+        name: "Company",
+        classis: "",
+        anchor: "about-us",
+
+    }, {
+        name: "collection",
+        classis: "",
+        anchor: "collection",
+        subnav: [{
+            name: "Challet",
+            classis: "",
+            anchor: "collection",
+        }, {
+            name: "Vintage Loft",
+            classis: "",
+            anchor: "collection",
+        }, {
+            name: "Salt Box",
+            classis: "",
+            anchor: "collection",
+        }, {
+            name: "Gallery",
+            classis: "",
+            anchor: "collection",
+        }, {
+            name: "Brick & Board",
+            classis: "",
+            anchor: "collection",
+        }, {
+            name: "Storehouse Plank",
+            classis: "",
+            anchor: "collection",
+        }, {
+            name: "Eighteen Seventy Five",
+            classis: "",
+            anchor: "collection",
+        }, {
+            name: "Ponderosa",
+            classis: "",
+            anchor: "collection",
+        }]
+
+    }, {
+        name: "VIRTUAL ROOM",
+        classis: "",
+        anchor: "home",
+
+
+    }, {
+        name: "CONTACT",
+        classis: "",
+        anchor: "contact",
+
     }];
 
     return {
-        getnav: function() {
+        getnav: function () {
             return navigation;
         },
-        makeactive: function(menuname) {
+        makeactive: function (menuname) {
             for (var i = 0; i < navigation.length; i++) {
                 if (navigation[i].name == menuname) {
                     navigation[i].classis = "active";

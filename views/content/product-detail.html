@@ -1,0 +1,20 @@
+<section auto-heightfixed class="product-detail" ng-style="{'background-image':'url('+bkimage+')'}">
+    <div class="tab-select">
+        <!--<uib-tabset active="active">
+            <uib-tab heading="SWATCH">
+                <div class="arrow-up"></div>
+            </uib-tab>
+            <uib-tab heading="TEXTURE & SHEEN">
+                <div class="arrow-up"></div>
+            </uib-tab>
+        </uib-tabset>-->
+        <div class="tabs" ng-click="showArrow(1)" style="{{changeColor1}}">
+            <p>SWATCH</p>
+            <div class="arrow-down" ng-show="arrow1"></div>
+        </div>
+        <div class="tabs " ng-click="showArrow(2)" style="{{changeColor2}}">
+            <p>TEXTURE & SHEEN</p>
+            <div class="arrow-down" ng-show="arrow2"></div>
+        </div>
+    </div>
+</section>

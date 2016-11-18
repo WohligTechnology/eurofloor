@@ -94,7 +94,6 @@
     
     header {
         .headA {
-            border-right: 2px solid #777 !important;
             line-height: 20px !important;
             padding: 3px 20px !important;
             color: #a7a7a7;
@@ -103,6 +102,47 @@
             line-height: 20px !important;
             padding: 3px 20px !important;
             color: #a7a7a7;
+        }
+        .navbar-brand {
+            padding: 0;
+            height: initial;
+        }
+        li {
+            position: relative;
+            padding: 22px 0px;
+            text-transform: uppercase;
+            /*border-bottom: 4px solid red;*/
+            /*&:active {
+                border-bottom: 4px solid red;
+            }*/
+            &:last-child(0) {
+                i {
+                    display: none;
+                }
+            }
+        }
+        i {
+            position: absolute;
+            right: -4px;
+            top: 43%;
+            font-size: 8px !important;
+            color: #a7a7a7;
+        }
+        .collection-list {
+            padding: 0;
+            li {
+                padding: 0 !important;
+            }
+            a {
+                padding: 18px 10px !important;
+            }
+        }
+        .dash {
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            background-color: #4e4c75;
+            bottom: 0;
         }
     }
     
@@ -756,6 +796,9 @@
                 font-size: 16px;
             }
         }
+        .con-saying {
+            font-size: 34px;
+        }
         .contact-title {
             padding: 5% 0 0 0;
             .img-holder {
@@ -788,10 +831,14 @@
                 margin-bottom: 90px;
                 input {
                     margin-bottom: 20px;
+                    border: 0;
+                    border-bottom: 1px solid #ccc !important;
                 }
                 textarea {
                     resize: none;
                     margin-bottom: 20px;
+                    border: 0;
+                    border-bottom: 1px solid #ccc !important;
                 }
             }
             .map {
@@ -891,16 +938,44 @@
             text-align: center;
             font-size: 40px;
         }
-        .img-holder {
-            position: relative;
-            cursor: pointer;
-            .collect-name {
+        .product-collection {
+            .img-holder {
+                position: relative;
+                overflow: hidden;
+                cursor: pointer;
+                .collect-name {
+                    position: absolute;
+                    top: 42%;
+                    font-size: 34px;
+                    width: 100%;
+                    color: #fff;
+                    text-align: center;
+                    z-index: 222;
+                }
+                img {
+                    -webkit-transform: scale(1);
+                    transform: scale(1);
+                    -webkit-transition: .3s ease-in-out;
+                    transition: .3s ease-in-out;
+                }
+                &:hover {
+                    img {
+                        -webkit-transform: scale(1.3);
+                        transform: scale(1.3);
+                    }
+                    .overlay {
+                        display: block;
+                    }
+                }
+            }
+            .overlay {
+                display: none;
                 position: absolute;
-                bottom: 5%;
-                font-size: 40px;
                 width: 100%;
-                color: #fff;
-                text-align: center;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.25);
+                top: 0;
+                left: 0;
             }
         }
     }
@@ -947,9 +1022,12 @@
             top: 0;
             left: 0;
         }
+        .sub-cat {
+            padding: 50px 0;
+        }
         .sub-cat-name {
             position: absolute;
-            bottom: 5%;
+            top: 42%;
             font-size: 28px;
             width: 100%;
             color: #fff;
@@ -971,6 +1049,48 @@
                 &:before {
                     content: ">  ";
                 }
+            }
+        }
+    }
+    
+    .product-detail {
+        /*background-image: url(../img/whistler-swatch.jpg);*/
+        background-size: cover;
+        position: relative;
+        .tab-select {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background-color: #f1eeee;
+            padding-top: 2px;
+            a {
+                font-size: 18px;
+                padding: 30px 60px;
+            }
+            .tabs {
+                display: inline-block;
+                font-size: 18px;
+                text-align: center;
+                position: relative;
+                width: 15%;
+                padding: 30px 0;
+                color: #343434;
+                &:active {
+                    background-color: #ebebeb;
+                }
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            .arrow-down {
+                width: 0;
+                height: 0;
+                border-left: 15px solid transparent;
+                border-right: 15px solid transparent;
+                border-top: 15px solid #fff;
+                bottom: -15px;
+                left: 40%;
+                position: absolute;
             }
         }
     }

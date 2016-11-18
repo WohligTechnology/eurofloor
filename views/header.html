@@ -8,17 +8,53 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-                <a class="navbar-brand" ui-sref="home"><img src="img/EURO-FLOOR-LOGO.jpg" alt="logo" width="200"> </a>
+                <a class="navbar-brand" ui-sref="home"><img src="img/EURO-FLOOR-LOGO.jpg" alt="logo" class="img-responsive"> </a>
             </div>
-            <div id="nav-collapse" class="navbar-collapse collapse">
-                <ul class="nav navbar-nav  pull-right pad18">
-                    <li><a class="headA" ui-sref="home">HOME</a></li>
-                    <li><a class="headA" ui-sref="company">COMPANY</a></li>
-                    <li><a class="headA" ui-sref="collection">COLLECTION</a></li>
-                    <li><a class="headA" ui-sref="virtual-room">VIRTUAL ROOM</a></li>
-                    <li><a class="headB" ui-sref="contact">CONTACT</a></li>
+            <!--<div id="nav-collapse" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav  pull-right ">
+                    <li ng-click="showBorder(1)" ui-sref="home" ng-style="{'border-bottom': giveBorder1}">
+                        <a class="headA">HOME</a>
+                        <i class="fa fa-circle " aria-hidden="true "></i>
+                        <div class="dash" ng-show="shownDash1">
+                        </div>
+                    </li>
+                    <li ng-click="showBorder(2) " ui-sref="about-us" ng-style="{'border-bottom': giveBorder2} ">
+                        <a class="headA ">COMPANY</a>
+                        <i class="fa fa-circle " aria-hidden="true "></i>
+                        <div class="dash" ng-show="shownDash2">
+                        </div>
+                    </li>
+                    <li class="dropdown-toggle" data-toggle="dropdown" ng-click="showBorder(3)" style="{'border-bottom': giveBorder3}">
+                        <a class="headA " ui-sref="collection ">COLLECTION</a>
+                        <i class="fa fa-circle " aria-hidden="true "></i>
+                        <div class="dash" ng-show="shownDash3">
+                        </div>
+                        <ul class="dropdown-menu collection-list">
+                            <li><a href="#">Challet</a></li>
+                            <li><a href="#">Vintage Loft</a></li>
+                            <li><a href="#">Salt Box</a></li>
+                            <li><a href="#">Gallery</a></li>
+                            <li><a href="#">Brick & Board</a></li>
+                            <li><a href="#">Storehouse Plank</a></li>
+                            <li><a href="#">Eighteen Seventy Five</a></li>
+                            <li><a href="#">Ponderosa</a></li>
+                            <li><a href="#">Salt Box</a></li>
+                        </ul>
+                    </li>
+                    <li ng-click="showBorder(4)" style="{'border-bottom': giveBorder4}">
+                        <a class="headA " ui-sref="virtual-room ">VIRTUAL ROOM</a>
+                        <i class="fa fa-circle " aria-hidden="true "></i>
+                        <div class="dash" ng-show="shownDash4">
+                        </div>
+                    </li>
+                    <li ng-click="showBorder(5)" style="{'border-bottom': giveBorder5}">
+                        <a class="headB " ui-sref="contact ">CONTACT</a>
+                        <div class="dash" ng-show="shownDash5">
+                        </div>
+                    </li>
                 </ul>
-            </div>
+            </div>-->
+            <div ng-include="template.menu" class="template menu"></div>
         </div>
     </nav>
 </header>
